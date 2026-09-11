@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -47,6 +46,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginTop="32dp"
         android:hint="CEP"
         app:boxBackgroundColor="#FFFFFF"
@@ -83,6 +83,7 @@
         android:id="@+id/btnConsultar"
         android:layout_width="0dp"
         android:layout_height="54dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#49BC6B"
         android:elevation="4dp"
@@ -98,11 +99,15 @@
         app:layout_constraintTop_toBottomOf="@id/textInputLayout" />
 
 
+    <!-- BAIRRO -->
+
     <TextView
         android:id="@+id/txtResultadoTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/numans"
         android:text="Informações do endereço"
         android:textColor="#39362F"
@@ -111,46 +116,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnConsultar" />
 
-
     <TextView
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/numans"
         android:text="Logradouro"
         android:textColor="#8A8276"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtResultadoTitulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtResultadoTitulo" />
 
     <EditText
         android:id="@+id/txtLogradouro"
-        android:layout_width="337dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="300dp"
+        android:layout_height="46dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="1dp"
         android:backgroundTint="#D6CFC2"
         android:enabled="true"
         android:fontFamily="@font/numans"
         android:hint="Endereço"
         android:inputType="text"
-        android:paddingStart="4dp"
         android:textColor="#33312C"
         android:textColorHint="#AAA49A"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text1" />
+        app:layout_constraintTop_toBottomOf="@+id/text1" />
 
-    <!-- BAIRRO -->
 
     <TextView
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/numans"
         android:text="Bairro"
@@ -158,13 +163,15 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtLogradouro" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLogradouro" />
 
     <EditText
         android:id="@+id/txtBairro"
-        android:layout_width="337dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#D6CFC2"
         android:enabled="true"
         android:fontFamily="@font/numans"
@@ -174,30 +181,31 @@
         android:textColor="#33312C"
         android:textColorHint="#AAA49A"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text3" />
-
+        app:layout_constraintTop_toBottomOf="@+id/text3" />
 
     <TextView
         android:id="@+id/text4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="26dp"
+        android:layout_height="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/numans"
         android:text="UF"
         android:textColor="#8A8276"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtBairro" />
+        app:layout_constraintTop_toBottomOf="@+id/txtBairro" />
 
     <EditText
         android:id="@+id/txtUf"
-        android:layout_width="337dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#D6CFC2"
         android:enabled="true"
         android:fontFamily="@font/numans"
@@ -207,29 +215,31 @@
         android:textColor="#33312C"
         android:textColorHint="#AAA49A"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text4" />
+        app:layout_constraintTop_toBottomOf="@+id/text4" />
 
     <TextView
         android:id="@+id/text5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/numans"
         android:text="DDD"
         android:textColor="#8A8276"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtUf" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUf" />
 
     <EditText
         android:id="@+id/txtDdd"
-        android:layout_width="337dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#D6CFC2"
         android:enabled="true"
         android:fontFamily="@font/numans"
@@ -239,29 +249,31 @@
         android:textColor="#33312C"
         android:textColorHint="#AAA49A"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text5" />
+        app:layout_constraintTop_toBottomOf="@+id/text5" />
 
     <TextView
         android:id="@+id/text6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/numans"
         android:text="Cidade"
         android:textColor="#8A8276"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtDdd" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDdd" />
 
     <EditText
         android:id="@+id/txtCidade"
-        android:layout_width="337dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#D6CFC2"
         android:enabled="true"
         android:fontFamily="@font/numans"
@@ -271,9 +283,8 @@
         android:textColor="#33312C"
         android:textColorHint="#AAA49A"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text6" />
+        app:layout_constraintTop_toBottomOf="@+id/text6" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
