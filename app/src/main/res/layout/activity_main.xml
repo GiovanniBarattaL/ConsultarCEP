@@ -17,7 +17,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/numans"
         android:letterSpacing="0.02"
         android:text="Consulta CEP"
         android:textColor="#49BC6B"
@@ -27,12 +28,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
         android:id="@+id/txtSubtitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
+        android:fontFamily="@font/numans"
         android:text="Encontre um endereço pelo CEP"
         android:textColor="#7A756C"
         android:textSize="14sp"
@@ -65,6 +66,7 @@
             android:id="@+id/edtCep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/numans"
             android:hint=""
             android:inputType="number"
             android:maxLength="8"
@@ -84,6 +86,7 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="#49BC6B"
         android:elevation="4dp"
+        android:fontFamily="@font/numans"
         android:text="CONSULTAR CEP"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -100,6 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/numans"
         android:text="Informações do endereço"
         android:textColor="#39362F"
         android:textSize="18sp"
@@ -112,7 +116,9 @@
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/numans"
         android:text="Logradouro"
         android:textColor="#8A8276"
         android:textSize="12sp"
@@ -122,11 +128,12 @@
 
     <EditText
         android:id="@+id/txtLogradouro"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="337dp"
+        android:layout_height="45dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="#D6CFC2"
         android:enabled="true"
+        android:fontFamily="@font/numans"
         android:hint="Endereço"
         android:inputType="text"
         android:paddingStart="4dp"
@@ -138,11 +145,14 @@
         app:layout_constraintTop_toBottomOf="@id/text1" />
 
     <!-- BAIRRO -->
+
     <TextView
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/numans"
         android:text="Bairro"
         android:textColor="#8A8276"
         android:textSize="12sp"
@@ -152,11 +162,12 @@
 
     <EditText
         android:id="@+id/txtBairro"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="337dp"
+        android:layout_height="45dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="#D6CFC2"
         android:enabled="true"
+        android:fontFamily="@font/numans"
         android:hint="Bairro"
         android:inputType="text"
         android:paddingStart="4dp"
@@ -172,7 +183,9 @@
         android:id="@+id/text4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/numans"
         android:text="UF"
         android:textColor="#8A8276"
         android:textSize="12sp"
@@ -182,11 +195,12 @@
 
     <EditText
         android:id="@+id/txtUf"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="337dp"
+        android:layout_height="45dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="#D6CFC2"
         android:enabled="true"
+        android:fontFamily="@font/numans"
         android:hint="Estado"
         android:inputType="text"
         android:paddingStart="4dp"
@@ -201,7 +215,9 @@
         android:id="@+id/text5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/numans"
         android:text="DDD"
         android:textColor="#8A8276"
         android:textSize="12sp"
@@ -211,11 +227,12 @@
 
     <EditText
         android:id="@+id/txtDdd"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="337dp"
+        android:layout_height="45dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="#D6CFC2"
         android:enabled="true"
+        android:fontFamily="@font/numans"
         android:hint="DDD"
         android:inputType="text"
         android:paddingStart="4dp"
@@ -225,5 +242,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text5" />
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/numans"
+        android:text="Cidade"
+        android:textColor="#8A8276"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDdd" />
+
+    <EditText
+        android:id="@+id/txtCidade"
+        android:layout_width="337dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#D6CFC2"
+        android:enabled="true"
+        android:fontFamily="@font/numans"
+        android:hint="Cidade"
+        android:inputType="text"
+        android:paddingStart="4dp"
+        android:textColor="#33312C"
+        android:textColorHint="#AAA49A"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text6" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
