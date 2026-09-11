@@ -37,26 +37,24 @@ class MainActivity : AppCompatActivity() {
             if (cep.length != 8) {
                 Toast.makeText(this, "CEP inválido.", Toast.LENGTH_LONG).show()
             }
-            lifecycleScope.launch{
-                val endereco = ViaCepClient.instance.buscarEndereco(cep)
-                txtLogradouro.setText(endereco.logradouro)
+            lifecycleScope.launch {
+
+                try {
+                    val endereco = ViaCepClient.instance.buscarEndereco(cep)
+                    txtLogradouro.setText(endereco.logradouro)
+                    txtBairro.setText(endereco.bairro)
+                    txtCidade.setText(endereco.localidade)
+                    txtUf.setText(endereco.uf)
+                    txtDdd.setText(endereco.ddd)
+                }catch (e: Exception){
+                    Toast.makeText(
+                        this@MainActivity,
+                        "Erro ao Consultar CEP",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
             }
-            lifecycleScope.launch{
-                val bairro = ViaCepClient.instance.buscarEndereco(cep)
-                txtBairro.setText(bairro.bairro)
-            }
-            lifecycleScope.launch{
-                val cidade = ViaCepClient.instance.buscarEndereco(cep)
-                txtCidade.setText(cidade.localidade)
-            }
-            lifecycleScope.launch{
-                val uf = ViaCepClient.instance.buscarEndereco(cep)
-                txtUf.setText(uf.uf)
-            }
-            lifecycleScope.launch{
-                val ddd = ViaCepClient.instance.buscarEndereco(cep)
-                txtDdd.setText(ddd.ddd)
-            }
+
         }
         }
 
